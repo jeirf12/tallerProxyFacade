@@ -1,7 +1,7 @@
 package co.unicauca.tallerfacade.domain;
 
 /**
- *
+ *  Un objeto item donde contendra plato y cantidad de este
  * @author Jhonfer
  * @author Jhonny
  */

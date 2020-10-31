@@ -6,7 +6,7 @@
 package co.unicauca.tallerfacade.domain;
 
 /**
- *
+ * estados de un pedido
  * @author Jhonfer
  * @author Jhonny
  */

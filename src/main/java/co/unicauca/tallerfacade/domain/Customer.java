@@ -1,7 +1,7 @@
 package co.unicauca.tallerfacade.domain;
 
 /**
- *
+ *  Objeto de cliente
  * @author Jhonfer
  * @author Jhonny
  */

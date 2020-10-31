@@ -5,9 +5,10 @@ package co.unicauca.tallerfacade.services;
  * @author Jhonfer
  * @author Jhonny
  */
-public class ProxyClient{
+public class ProxyClient {
     public IOrderService orderService;
-
+    
+    
     public ProxyClient(IOrderService orderService) {
         this.orderService = orderService;
     }
@@ -24,5 +25,4 @@ public class ProxyClient{
         IOrderRepository repo = Factory.getInstance().getRepositorio("default");
         orderService.save(repo);
     }
-
 }

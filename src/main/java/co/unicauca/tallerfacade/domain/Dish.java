@@ -1,7 +1,7 @@
 package co.unicauca.tallerfacade.domain;
 
 /**
- *
+ *  un objeto de plato
  * @author Jhonfer
  * @author Jhonny
  */

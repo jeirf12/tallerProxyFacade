@@ -11,7 +11,11 @@ import org.slf4j.LoggerFactory;
  */
 public class OrderServiceLogger implements IOrderService{
     private OrderFacade orderFacade;
-
+    
+    public OrderServiceLogger() {
+        orderFacade=new OrderFacade();
+    }
+    
     public OrderServiceLogger(OrderFacade orderFacade) {
         this.orderFacade = orderFacade;
     }
@@ -27,6 +31,7 @@ public class OrderServiceLogger implements IOrderService{
     @Override
     public void save(IOrderRepository repo) {
         Logger logger= LoggerFactory.getLogger(OrderServiceLogger.class);
+        orderFacade.save(repo);
         
         //se hace el log
         String message = "Pedido guardado en la base de datos";

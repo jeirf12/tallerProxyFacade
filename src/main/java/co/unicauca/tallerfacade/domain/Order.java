@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ *  Un objeto de una orden 
  * @author Jhonfer
  * @author Jhonny
  */
@@ -17,13 +17,13 @@ public class Order {
     private List<Item> details;
     
     public Order(Customer customer) {
-        this.despatch = 0;
+        this.despatch = 1500;
         this.customer = customer;
         this.details = new ArrayList<>();
     }
 
     public Order() {
-        this.despatch = 0;
+        this.despatch = 1500;
         this.customer = new Customer();
         this.details = new ArrayList<>();
     }
@@ -67,16 +67,23 @@ public class Order {
     public void setDetails(Item it) {
         this.details.add(it);
     }
-    
+    /**
+     * Añade platos a la orden
+     * @param dish
+     * @param amount 
+     */
     public void addDish(Dish dish, int amount){
         this.details.add(new Item(dish, amount));
     }
-    
+    /**
+     * Calcula el total que vale la orden
+     * @return 
+     */
     public int calculateTotal(){
         int total = 0;
         for (Item details : this.details) {
             total += details.getDish().getPrice()*details.getAmount();
         }
-        return total;
+        return total+despatch;
     }
 }
